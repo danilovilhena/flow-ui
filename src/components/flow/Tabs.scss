@@ -1,0 +1,30 @@
+.flow-tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  .flow-tab {
+    padding: 4px 8px;
+    transition: color 0.2s ease-in-out;
+
+    &[data-active='false'] {
+      color: #a7a7a7;
+    }
+
+    &:not([data-active='true']):hover {
+      color: #555555;
+    }
+  }
+
+  .flow-tab-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    z-index: -1;
+  }
+}

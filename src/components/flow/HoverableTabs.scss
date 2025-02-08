@@ -1,0 +1,41 @@
+.flow-hoverable-tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+
+  .flow-tab {
+    position: relative;
+    padding: 4px 8px;
+    transition: color 0.2s ease-in-out;
+
+    &[data-active='false'] {
+      color: #a7a7a7;
+    }
+
+    &:not([data-active='true']):hover {
+      color: #555555;
+    }
+
+    .flow-hover-indicator {
+      position: absolute;
+      inset: 0px;
+      background-color: rgba(#000000, 0.05);
+      border-radius: 6px;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+
+  .flow-tab-indicator {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 1px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    z-index: -1;
+    pointer-events: none;
+  }
+}

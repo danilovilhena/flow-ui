@@ -1,12 +1,11 @@
 # 🌀 Flow UI
 
-A modern collection of beautifully crafted React components built with Framer Motion, and Tailwind CSS.
+A modern collection of beautifully crafted React components built with Framer Motion and SCSS.
 
 ## Features
 
 - 🎨 Modern, clean design
 - 🎭 Framer Motion animations
-- 🎯 Tailwind CSS styling
 - 📱 Fully responsive
 - 🔧 Easy to customize
 
