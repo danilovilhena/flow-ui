@@ -51,14 +51,24 @@ const Tabs = ({ tabs = [], defaultActiveIndex = 0, onClick }) => {
   }, [getActiveItem, updateCursor]);
 
   return (
-    <div className="flow-tabs" ref={containerRef}>
+    <div className="relative flex items-center gap-2 w-full" ref={containerRef}>
       {tabs.map((tab, index) => (
-        <button className="flow-tab" key={index} data-active={activeIndex === index} onClick={() => onTabClick(index)}>
+        <button
+          className={`px-2 py-1 transition-colors duration-200 ${activeIndex !== index ? 'text-gray-400 hover:text-gray-600' : ''}`}
+          key={index}
+          data-active={activeIndex === index}
+          onClick={() => onTabClick(index)}
+        >
           {tab.label}
         </button>
       ))}
 
-      <motion.div className="flow-tab-indicator" initial={false} animate={cursorStyle} transition={{ type: 'spring', bounce: 0.3, duration: 0.5 }} />
+      <motion.div
+        className="absolute top-0 left-0 h-full bg-gray-100 rounded-md -z-10"
+        initial={false}
+        animate={cursorStyle}
+        transition={{ type: 'spring', bounce: 0.3, duration: 0.5 }}
+      />
     </div>
   );
 };

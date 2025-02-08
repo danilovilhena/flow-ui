@@ -1,6 +1,5 @@
 'use client';
 
-import './HoverableTabs.scss';
 import { motion, MotionConfig, AnimatePresence } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -64,11 +63,11 @@ const HoverableTabs = ({ tabs, defaultActiveIndex = 0, onClick }) => {
   };
 
   return (
-    <div className="flow-hoverable-tabs" ref={containerRef}>
+    <div className="relative flex items-center gap-2 w-fit" ref={containerRef}>
       <MotionConfig transition={{ type: 'spring', bounce: 0.2, duration: 0.4 }}>
         {tabs.map((tab, index) => (
           <button
-            className="flow-tab"
+            className={`relative px-2 py-1 transition-colors duration-200 ${activeIndex !== index ? 'text-gray-400 hover:text-gray-600' : ''}`}
             key={index}
             data-active={activeIndex === index}
             onClick={() => onTabClick(index)}
@@ -80,7 +79,7 @@ const HoverableTabs = ({ tabs, defaultActiveIndex = 0, onClick }) => {
               {hoverIndex === index && (
                 <motion.div
                   layoutId="flow-hover-indicator"
-                  className="flow-hover-indicator"
+                  className="absolute inset-0 bg-black/5 rounded-md -z-10 pointer-events-none"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -90,7 +89,11 @@ const HoverableTabs = ({ tabs, defaultActiveIndex = 0, onClick }) => {
             {tab.label}
           </button>
         ))}
-        <motion.div className="flow-tab-indicator" initial={false} animate={cursorStyle} />
+        <motion.div
+          className="absolute -bottom-1 left-0 h-[1px] bg-gray-900 rounded-md -z-10 pointer-events-none"
+          initial={false}
+          animate={cursorStyle}
+        />
       </MotionConfig>
     </div>
   );
