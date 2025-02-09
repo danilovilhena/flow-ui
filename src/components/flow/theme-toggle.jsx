@@ -5,7 +5,7 @@ import { MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme = 'light', setTheme } = useTheme();
   const iconClassName =
     theme !== 'light'
       ? 'w-3.5 h-3.5 text-neutral-400 group-hover:text-yellow-500 transition-colors duration-200'
