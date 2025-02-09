@@ -9,8 +9,8 @@ import useActiveCursor from '@/hooks/use-active-cursor.jsx';
 const tabsCursorVariants = cva('absolute left-0 -z-10 pointer-events-none', {
   variants: {
     variant: {
-      default: 'top-0 h-full bg-gray-100 rounded-md',
-      underline: '-bottom-1 h-[1px] bg-gray-900 rounded-md',
+      default: 'top-0 h-full bg-gray-100 dark:bg-neutral-900 rounded-md',
+      underline: '-bottom-1 h-[1px] bg-gray-900 dark:bg-neutral-100 rounded-md',
     },
   },
   defaultVariants: {
@@ -21,8 +21,8 @@ const tabsCursorVariants = cva('absolute left-0 -z-10 pointer-events-none', {
 const tabsHoverVariants = cva('absolute -z-9 pointer-events-none', {
   variants: {
     variant: {
-      default: 'inset-0 bg-black/5 rounded-md',
-      underline: 'inset-x-0 -bottom-1 h-[1px] bg-gray-900 rounded-md',
+      default: 'inset-0 bg-black/5 dark:bg-neutral-100/5 rounded-md',
+      underline: 'inset-x-0 -bottom-1 h-[1px] bg-gray-900 dark:bg-neutral-100 rounded-md',
     },
   },
   defaultVariants: {
@@ -79,7 +79,7 @@ const Tabs = ({ id, tabs = [], defaultTab = 0, variant = 'default', hoverable = 
           key={index}
           className={cn(
             'px-2 py-1 transition-colors duration-200',
-            activeIndex !== index ? 'text-gray-400 hover:text-gray-600' : '',
+            activeIndex !== index ? 'text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-400' : '',
             hoverable ? 'relative' : '',
           )}
           data-active={activeIndex === index}
