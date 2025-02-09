@@ -1,5 +1,6 @@
 'use client';
 
+import ClipboardButton from '@/components/flow/clipboard-button.jsx';
 import Tabs from '@/components/flow/tabs';
 import ThemeToggle from '@/components/flow/theme-toggle.jsx';
 
@@ -29,6 +30,10 @@ export default function Playground() {
         <div>
           <p className="text-sm text-gray-500 mb-2">Hoverable Underline Tabs</p>
           <Tabs id="tabs-4" tabs={tabs} variant="underline" hoverable />
+        </div>
+        <div>
+          <p className="text-sm text-gray-500 mb-2">Clipboard Button</p>
+          <ClipboardButton />
         </div>
       </div>
     </main>
