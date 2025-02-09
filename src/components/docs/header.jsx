@@ -6,7 +6,7 @@ import Link from 'next/link';
 const DocsHeader = () => {
   return (
     <header className="sticky top-0 z-40 w-full h-fit bg-background/40 backdrop-blur-lg">
-      <div className="flex py-4 px-8 items-center justify-between">
+      <div className="flex p-4 items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href="/">
             <p className="text-xl font-bold text-center">🌀 Flow UI</p>
