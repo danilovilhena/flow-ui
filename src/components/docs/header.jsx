@@ -20,7 +20,7 @@ const DocsHeader = () => {
         </div>
         <div className="flex items-center gap-2">
           <button className="relative flex items-center justify-between w-64 h-8 px-2 border rounded-lg cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200">
-            <p className="text-[12px] text-neutral-500 dark:text-neutral-400">Search components</p>
+            <p className="text-[12px] text-neutral-500 dark:text-neutral-400">Search components (soon)</p>
             <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-neutral-50 dark:bg-neutral-900 px-1.5 font-mono text-[10px] text-neutral-400 font-medium opacity-100 sm:flex">
               <span className="text-xs">⌘</span>K
             </kbd>
