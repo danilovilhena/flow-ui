@@ -1,6 +1,5 @@
 'use client';
 
-import './Tabs.scss';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 

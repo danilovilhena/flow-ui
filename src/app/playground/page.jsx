@@ -1,7 +1,7 @@
 'use client';
 
-import HoverableTabs from '@/components/flow/HoverableTabs.jsx';
-import Tabs from '@/components/flow/Tabs.jsx';
+import HoverableTabs from '@/components/flow/hoverable-tabs.jsx';
+import Tabs from '@/components/flow/tabs.jsx';
 
 export default function Playground() {
   const tabs = [{ label: 'Home' }, { label: 'About' }, { label: 'Contact' }];
